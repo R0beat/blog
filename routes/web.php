@@ -58,18 +58,10 @@ Route::get('/', function () {
 */
 
 //El método view es para paginas con poca o nula información 
-
-$portfolio = [
-
-		['title' => 'Proyect #1'],
-		['title' => 'Proyect #2'],
-		['title' => 'Proyect #3'],
-		['title' => 'Proyect #4'],
-			];
 Route::view('/','home',['nombre' => 'Roberto'])->name('home');
 Route::view('/about','about')->name('about');
 Route::view('/contact','contact')->name('contact');
-Route::view('/portfolio','portfolio',compact('portfolio'))->name('portfolio');
+Route::get('/portfolio','PortfolioController')->name('portfolio');
 
 
 
