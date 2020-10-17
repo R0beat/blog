@@ -58,12 +58,12 @@ Route::get('/', function () {
 */
 
 //El método view es para paginas con poca o nula información 
-//Route::view('/','home',['nombre' => 'Roberto'])->name('home');
-//Route::view('/about','about')->name('about');
-//Route::view('/contact','contact')->name('contact');
-//Route::get('/portfolio','PortfolioController@index')->name('portfolio');
+Route::view('/','home',['nombre' => 'Roberto'])->name('home');
+Route::view('/about','about')->name('about');
+Route::view('/contact','contact')->name('contact');
+Route::get('/portfolio','PortfolioController@index')->name('portfolio');
 
 //->only(['index','show']); Muestra solo los metodos mencionadas
 //->except(['index','show']); Muestra todoso meno los metodos mencionadas
-Route::resource('proyectos','PortfolioController');
+//Route::resource('proyectos','PortfolioController');
 
