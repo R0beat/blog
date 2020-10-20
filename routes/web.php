@@ -62,6 +62,7 @@ Route::view('/','home',['nombre' => 'Roberto'])->name('home');
 Route::view('/about','about')->name('about');
 Route::view('/contact','contact')->name('contact');
 Route::get('/portfolio','PortfolioController@index')->name('portfolio');
+Route::post('contact','MessageController@store');
 
 //->only(['index','show']); Muestra solo los metodos mencionadas
 //->except(['index','show']); Muestra todoso meno los metodos mencionadas
