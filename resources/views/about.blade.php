@@ -2,6 +2,6 @@
 @section('title','About')
 
 @section('content')
-About
+@lang('About')
 @endsection
 

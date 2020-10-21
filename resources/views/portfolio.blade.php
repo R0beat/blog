@@ -2,7 +2,7 @@
 @section('title','Portfolio')
 
 @section('content')
-Portfolio
+@lang('Portfolio')
 
 <ul>
 
