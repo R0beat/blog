@@ -14,10 +14,13 @@ class ProjectController extends Controller
 	'project' => Project::latest()->paginate()
       ]);
     }
-    public function show($id){
+    public function show(Project $projects){ //Route Model Binding
       return view('projects.show',[
-	'project' => Project::findOrFail($id)
+	'project' => $projects
       ]);
+    }
+    public function create() {
+      return view('projects.create');
     }
 
 }
