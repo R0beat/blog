@@ -22,5 +22,8 @@ class ProjectController extends Controller
     public function create() {
       return view('projects.create');
     }
-
+    public function store() {
+      Project::create(request()->all());
+      return redirect()->route('projects.index');
+    }
 }

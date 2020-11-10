@@ -61,9 +61,10 @@ Route::get('/', function () {
 Route::view('/','home',['nombre' => 'Roberto'])->name('home');
 Route::view('/about','about')->name('about');
 Route::view('/contact','contact')->name('contact');
-Route::get('/portfolio/crear','ProjectController@create')->name('projects.create');
-Route::get('/portfolio','ProjectController@index')->name('projects.index');
-Route::get('/portfolio/{projects}','ProjectController@show')->name('projects.show');
+Route::get('/project/crear','ProjectController@create')->name('projects.create');
+Route::get('/project','ProjectController@index')->name('projects.index');
+Route::post('/project','ProjectController@store')->name('projects.store');
+Route::get('/project/{projects}','ProjectController@show')->name('projects.show');
 Route::post('contact','MessageController@store')->name('message.store');
 
 //->only(['index','show']); Muestra solo los metodos mencionadas

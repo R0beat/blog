@@ -1,9 +1,8 @@
 @extends('layouts.layout' )
 @section('title','Projects')
-
 @section('content')
-@lang('Portfolio')
-
+  @lang('Portfolio')<br>
+<a href="{{route('projects.create')}}">Crear Nuevo Proyecto</a>
 <ul>
 
 	@forelse($project as $projects)
