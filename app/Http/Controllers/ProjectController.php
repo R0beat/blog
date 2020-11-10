@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Project;
 
+use App\Http\Requests\CreateProjectRequest;
 
 class ProjectController extends Controller
 {
@@ -22,8 +23,10 @@ class ProjectController extends Controller
     public function create() {
       return view('projects.create');
     }
-    public function store() {
-      Project::create(request()->all());
+    public function store(CreateProjectRequest $request) {
+      Project::create($request -> validated() );
+     
       return redirect()->route('projects.index');
+
     }
 }
