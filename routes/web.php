@@ -62,6 +62,8 @@ Route::view('/','home',['nombre' => 'Roberto'])->name('home');
 Route::view('/about','about')->name('about');
 Route::view('/contact','contact')->name('contact');
 Route::get('/project/crear','ProjectController@create')->name('projects.create');
+Route::get('/project/{projects}/editar','ProjectController@edit')->name('projects.edit');
+Route::patch('/project/{projects}','ProjectController@update')->name('projects.update');
 Route::get('/project','ProjectController@index')->name('projects.index');
 Route::post('/project','ProjectController@store')->name('projects.store');
 Route::get('/project/{projects}','ProjectController@show')->name('projects.show');

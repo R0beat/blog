@@ -13,6 +13,6 @@
 		<p>{{ $errors->first('subject') }}</p>
 		<textarea name="content" placeholder="@lang('Message')" value="{{ old('content') }}"></textarea><br>
 		<p>{{ $errors->first('content') }}</p>
-		<button>Enviar</button>
+		<button>@lang('Submit')</button>
 	</form>
 @endsection
