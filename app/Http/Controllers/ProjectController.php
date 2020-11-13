@@ -12,12 +12,12 @@ class ProjectController extends Controller
 {
     public function index() {
       return view('projects.index',[
-	'project' => Project::latest()->paginate()
+	     'project' => Project::latest()->paginate()
       ]);
     }
-    public function show(Project $projects){ //Route Model Binding
+    public function show(Project $project){ //Route Model Binding
       return view('projects.show',[
-	'project' => $projects
+	     'project' => $project
       ]);
     }
     public function create() {
@@ -30,16 +30,21 @@ class ProjectController extends Controller
       return redirect()->route('projects.index');
 
     }
-    public function edit(Project $projects){
+    public function edit(Project $project){
       return view('projects.edit',[
-	'project' => $projects
+	     'project' => $project //array project lo guardamos en la variable proyec
       ]);
       
     }
-    public function update(Project $projects,SaveProjectRequest $request){
+    public function update(Project $project,SaveProjectRequest $request){
       
       $projects->update( $request->validated() );
-      return redirect()->route('projects.show',$projects); 
+      return redirect()->route('projects.show',$project); 
+    }
+    public function destroy(Project $project)
+    {
+      $project->delete();
+      return redirect()->route('projects.index');
     }
 
 }
