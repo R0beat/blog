@@ -27,7 +27,7 @@ class ProjectController extends Controller
     public function store(SaveProjectRequest $request) {
       Project::create($request -> validated() );
      
-      return redirect()->route('projects.index');
+      return redirect()->route('projects.index')->with('status',__('The project was created successfully'));
 
     }
     public function edit(Project $project){
@@ -38,13 +38,13 @@ class ProjectController extends Controller
     }
     public function update(Project $project,SaveProjectRequest $request){
       
-      $projects->update( $request->validated() );
-      return redirect()->route('projects.show',$project); 
+      $project->update( $request->validated() );
+      return redirect()->route('projects.show',$project)->with('status',__('The proyect updated successfully')); 
     }
     public function destroy(Project $project)
     {
       $project->delete();
-      return redirect()->route('projects.index');
+      return redirect()->route('projects.index')->with('status',__('Proyect successfully removed'));
     }
 
 }

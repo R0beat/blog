@@ -19,6 +19,6 @@ class MessageController extends Controller
     	]);
         Mail::to('roberto.gonzalez.a739@gmail.com')->queue(new MessageReceived($messge));
 
-        return 'Mensaje Enviado';
+        return back()->with('status',__('Message received, We will respond to you in less than 24 hours'));
 	}
 }

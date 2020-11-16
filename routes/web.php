@@ -4,14 +4,14 @@
 Route::view('/','home',['nombre' => 'Roberto'])->name('home');
 Route::view('/about','about')->name('about');
 Route::view('/contact','contact')->name('contact');
-
-// 1- Recive el nombre del recurso y el nombre del controlador
+Route::post('contact','MessageController@store')->name('message.store');
+// 1- Recibe el nombre del recurso y el nombre del controlador
 // 2- Encadenamos el metodo names para darle nombre a este recurso
 // 3- como parametro debe ser igual al del controlador
 // pasamos un array con la varible portfolio y la renombramos proyect
 
 Route::resource('portfolio','ProjectController')
-    ->parameters(['portfolio'=>'proyects'])
+    ->parameters(['portfolio'=>'project'])
     ->names('projects');
  /*
 Route::get('/project/crear','ProjectController@create')->name('projects.create');
@@ -21,5 +21,5 @@ Route::delete('/project/{project}','ProjectController@destroy')->name('projects.
 Route::get('/project','ProjectController@index')->name('projects.index');
 Route::post('/project','ProjectController@store')->name('projects.store');
 Route::get('/project/{project}','ProjectController@show')->name('projects.show');
-Route::post('contact','MessageController@store')->name('message.store');
+
  */
