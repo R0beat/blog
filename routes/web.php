@@ -23,3 +23,6 @@ Route::post('/project','ProjectController@store')->name('projects.store');
 Route::get('/project/{project}','ProjectController@show')->name('projects.show');
 
  */
+
+Auth::routes(['register' => false]);
+

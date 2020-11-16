@@ -1,6 +1,9 @@
 @extends('layouts.layout')
-@section('title','Home')
 
+@section('title','Home')
 @section('content')
-@lang('Home')
+    <h1>@lang('Home')</h1>
+    @auth
+    	{{ auth()->user()->name }}
+    @endauth
 @endsection
