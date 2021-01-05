@@ -4,12 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@yield('title')</title>
-	<style>
-		.active a{
-			color: red !important;
-			text-decoration: none !important;
-		}
-	</style>
+	<link rel="stylesheet" href="{{ asset('./css/app.css') }}">
+	<link rel="stylesheet" href="{{ asset('./js/app.js') }}" defer>
 </head>
 <body>
 	@include('partials.nav')

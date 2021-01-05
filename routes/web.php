@@ -13,6 +13,7 @@ Route::post('contact','MessageController@store')->name('message.store');
 Route::resource('portfolio','ProjectController')
     ->parameters(['portfolio'=>'project'])
     ->names('projects');
+   // ->middleware('auth'); Si queremos proteger todas las rutas 
  /*
 Route::get('/project/crear','ProjectController@create')->name('projects.create');
 Route::get('/project/{project}/editar','ProjectController@edit')->name('projects.edit');
@@ -24,5 +25,5 @@ Route::get('/project/{project}','ProjectController@show')->name('projects.show')
 
  */
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => false]);[
 

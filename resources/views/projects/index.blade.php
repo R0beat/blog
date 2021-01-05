@@ -2,7 +2,10 @@
 @section('title','Projects')
 @section('content')
   <h1>@lang('Projects')</h1><br>
-<a href="{{route('projects.create')}}">@lang('New Project')</a>
+  @auth
+	<a href="{{route('projects.create')}}">@lang('New Project')</a>
+  @endauth
+
 <ul>
 
 	@forelse($project as $projects)

@@ -6,6 +6,12 @@ php artisan migrate
 php artisan r:l //route:list
 php artisan r:l --name='name-route'
 
+#Para crear rutas
+composer require laravel/ui
+php artisan ui vue --auth
+npm install
+npm run dev
+
 ## Ejemplos de Rutas
 
 
