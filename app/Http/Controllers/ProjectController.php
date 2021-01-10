@@ -12,7 +12,7 @@ class ProjectController extends Controller
 {
     public function index() {
       return view('projects.index',[
-	     'project' => Project::latest()->paginate()
+	     'project' => Project::latest()->paginate(8)
       ]);
     }
     public function show(Project $project){ //Route Model Binding

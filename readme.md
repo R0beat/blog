@@ -64,3 +64,9 @@ Route::get('/', function () {
 //->only(['index','show']); Muestra solo los metodos mencionadas
 //->except(['index','show']); Muestra todoso meno los metodos mencionadas
 //Route::resource('proyectos','PortfolioController');
+#Laravel Mix
+npm run dev /compilar estilos
+yarn dev /compilar estilos
+
+npm run watch /para que los cambios se hagan en automatico
+yarn watch /para que los cambios se hagan en automatico

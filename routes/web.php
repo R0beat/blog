@@ -25,5 +25,5 @@ Route::get('/project/{project}','ProjectController@show')->name('projects.show')
 
  */
 
-Auth::routes(['register' => false]);[
+Auth::routes(['register' => false]);
 

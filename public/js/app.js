@@ -49868,15 +49868,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/stylus/app.styl":
+/*!***********************************!*\
+  !*** ./resources/stylus/app.styl ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/stylus-loader/dist/cjs.js):\nValidationError: Invalid options object. Stylus Loader has been initialized using an options object that does not match the API schema.\n - options has an unknown property 'preferPathResolver'. These properties are valid:\n   object { stylusOptions?, sourceMap?, webpackImporter?, additionalData? }\n    at validate (C:\\laragon\\www\\blog\\node_modules\\stylus-loader\\node_modules\\schema-utils\\dist\\validate.js:104:11)\n    at Object.stylusLoader (C:\\laragon\\www\\blog\\node_modules\\stylus-loader\\dist\\index.js:24:29)\n    at runLoaders (C:\\laragon\\www\\blog\\node_modules\\webpack\\lib\\NormalModule.js:316:20)\n    at C:\\laragon\\www\\blog\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\laragon\\www\\blog\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at process._tickCallback (internal/process/next_tick.js:68:7)");
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.sass ***!
-  \*************************************************************/
+/*!***************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/stylus/app.styl ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\laragon\www\blog\resources\js\app.js */"./resources/js/app.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\laragon\\www\\blog\\resources\\sass\\app.sass'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+module.exports = __webpack_require__(/*! C:\laragon\www\blog\resources\stylus\app.styl */"./resources/stylus/app.styl");
 
 
 /***/ })
